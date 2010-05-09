@@ -1,0 +1,26 @@
+<h1>Listing objects</h1>
+
+<table>
+  <tr>
+    <th>App</th>
+    <th>User</th>
+    <th>Group</th>
+    <th>Type</th>
+  </tr>
+
+<% @objects.each do |objects| %>
+  <tr>
+    <td><%=h objects.app_id %></td>
+    <td><%=h objects.user_id %></td>
+    <td><%=h objects.group_id %></td>
+    <td><%=h objects.type %></td>
+    <td><%= link_to 'Show', objects %></td>
+    <td><%= link_to 'Edit', edit_objects_path(objects) %></td>
+    <td><%= link_to 'Destroy', objects, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New objects', new_objects_path %>

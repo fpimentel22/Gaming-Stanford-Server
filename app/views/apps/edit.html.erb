@@ -1,0 +1,24 @@
+<h1>Editing app</h1>
+
+<% form_for(@app) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :api_key %><br />
+    <%= f.text_field :api_key %>
+  </p>
+  <p>
+    <%= f.label :developer_id %><br />
+    <%= f.text_field :developer_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @app %> |
+<%= link_to 'Back', apps_path %>

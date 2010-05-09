@@ -1,0 +1,28 @@
+<h1>Editing objects</h1>
+
+<% form_for(@objects) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :app_id %><br />
+    <%= f.text_field :app_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :group_id %><br />
+    <%= f.text_field :group_id %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @objects %> |
+<%= link_to 'Back', objects_path %>

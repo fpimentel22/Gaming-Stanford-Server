@@ -1,0 +1,28 @@
+<p>
+  <b>App:</b>
+  <%=h @score_board.app_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @score_board.user_id %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=h @score_board.group_id %>
+</p>
+
+<p>
+  <b>Value:</b>
+  <%=h @score_board.value %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @score_board.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_score_board_path(@score_board) %> |
+<%= link_to 'Back', score_boards_path %>

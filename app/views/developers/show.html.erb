@@ -1,0 +1,23 @@
+<p>
+  <b>First name:</b>
+  <%=h @developers.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @developers.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @developers.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @developers.password %>
+</p>
+
+
+<%= link_to 'Edit', edit_developers_path(@developers) %> |
+<%= link_to 'Back', developers_path %>

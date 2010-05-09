@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @app.name %>
+</p>
+
+<p>
+  <b>Api key:</b>
+  <%=h @app.api_key %>
+</p>
+
+<p>
+  <b>Developer:</b>
+  <%=h @app.developer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_app_path(@app) %> |
+<%= link_to 'Back', apps_path %>

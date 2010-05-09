@@ -1,0 +1,38 @@
+<p>
+  <b>Object:</b>
+  <%=h @object_properties.object_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @object_properties.name %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @object_properties.type %>
+</p>
+
+<p>
+  <b>Int val:</b>
+  <%=h @object_properties.int_val %>
+</p>
+
+<p>
+  <b>Float val:</b>
+  <%=h @object_properties.float_val %>
+</p>
+
+<p>
+  <b>String val:</b>
+  <%=h @object_properties.string_val %>
+</p>
+
+<p>
+  <b>Blob val:</b>
+  <%=h @object_properties.blob_val %>
+</p>
+
+
+<%= link_to 'Edit', edit_object_properties_path(@object_properties) %> |
+<%= link_to 'Back', object_properties_path %>

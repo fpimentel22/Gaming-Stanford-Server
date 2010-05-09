@@ -1,0 +1,22 @@
+<h1>Listing apps_users</h1>
+
+<table>
+  <tr>
+    <th>App</th>
+    <th>User</th>
+  </tr>
+
+<% @apps_users.each do |apps_users| %>
+  <tr>
+    <td><%=h apps_users.app_id %></td>
+    <td><%=h apps_users.user_id %></td>
+    <td><%= link_to 'Show', apps_users %></td>
+    <td><%= link_to 'Edit', edit_apps_users_path(apps_users) %></td>
+    <td><%= link_to 'Destroy', apps_users, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New apps_users', new_apps_users_path %>

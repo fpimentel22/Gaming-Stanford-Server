@@ -1,0 +1,33 @@
+<h1>Listing score_boards</h1>
+
+<table>
+  <tr>
+    <th>App</th>
+    <th>User</th>
+    <th>Group</th>
+    <th>Value</th>
+    <th>Type</th>
+  </tr>
+
+<% @score_boards.each do |score_board| %>
+  <tr>
+    <td><%=h score_board.app_id %></td>
+    <td><%=h score_board.user_id %></td>
+    <td><%=h score_board.group_id %></td>
+    <td><%=h score_board.value %></td>
+    <td><%=h score_board.type %></td>
+    <td><%= link_to 'Show', score_board %></td>
+    <td><%= link_to 'Edit', edit_score_board_path(score_board) %></td>
+    <td><%= link_to 'Destroy', score_board, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New score_board', new_score_board_path %>
+
+<br />
+<br />
+
+<%= link_to "Home", :controller => "home" %>

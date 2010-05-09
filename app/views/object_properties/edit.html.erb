@@ -1,0 +1,40 @@
+<h1>Editing object_properties</h1>
+
+<% form_for(@object_properties) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :object_id %><br />
+    <%= f.text_field :object_id %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.label :int_val %><br />
+    <%= f.text_field :int_val %>
+  </p>
+  <p>
+    <%= f.label :float_val %><br />
+    <%= f.text_field :float_val %>
+  </p>
+  <p>
+    <%= f.label :string_val %><br />
+    <%= f.text_field :string_val %>
+  </p>
+  <p>
+    <%= f.label :blob_val %><br />
+    <%= f.text_field :blob_val %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @object_properties %> |
+<%= link_to 'Back', object_properties_path %>

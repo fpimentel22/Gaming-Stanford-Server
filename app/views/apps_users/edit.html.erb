@@ -1,0 +1,20 @@
+<h1>Editing apps_users</h1>
+
+<% form_for(@apps_users) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :app_id %><br />
+    <%= f.text_field :app_id %>
+  </p>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @apps_users %> |
+<%= link_to 'Back', apps_users_path %>

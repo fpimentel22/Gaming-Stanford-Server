@@ -1,0 +1,13 @@
+<p>
+  <b>App:</b>
+  <%=h @apps_users.app_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @apps_users.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_apps_users_path(@apps_users) %> |
+<%= link_to 'Back', apps_users_path %>

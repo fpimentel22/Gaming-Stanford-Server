@@ -1,0 +1,32 @@
+<h1>Listing object_properties</h1>
+
+<table>
+  <tr>
+    <th>Object</th>
+    <th>Name</th>
+    <th>Type</th>
+    <th>Int val</th>
+    <th>Float val</th>
+    <th>String val</th>
+    <th>Blob val</th>
+  </tr>
+
+<% @object_properties.each do |object_properties| %>
+  <tr>
+    <td><%=h object_properties.object_id %></td>
+    <td><%=h object_properties.name %></td>
+    <td><%=h object_properties.type %></td>
+    <td><%=h object_properties.int_val %></td>
+    <td><%=h object_properties.float_val %></td>
+    <td><%=h object_properties.string_val %></td>
+    <td><%=h object_properties.blob_val %></td>
+    <td><%= link_to 'Show', object_properties %></td>
+    <td><%= link_to 'Edit', edit_object_properties_path(object_properties) %></td>
+    <td><%= link_to 'Destroy', object_properties, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New object_properties', new_object_properties_path %>

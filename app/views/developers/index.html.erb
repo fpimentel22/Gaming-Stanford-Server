@@ -1,0 +1,26 @@
+<h1>Listing developers</h1>
+
+<table>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Email</th>
+    <th>Password</th>
+  </tr>
+
+<% @developers.each do |developers| %>
+  <tr>
+    <td><%=h developers.first_name %></td>
+    <td><%=h developers.last_name %></td>
+    <td><%=h developers.email %></td>
+    <td><%=h developers.password %></td>
+    <td><%= link_to 'Show', developers %></td>
+    <td><%= link_to 'Edit', edit_developers_path(developers) %></td>
+    <td><%= link_to 'Destroy', developers, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New developers', new_developers_path %>

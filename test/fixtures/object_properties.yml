@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  object_id: 1
+  name: MyString
+  type: 1
+  int_val: 1
+  float_val: 1.5
+  string_val: MyString
+  blob_val: 
+
+two:
+  object_id: 1
+  name: MyString
+  type: 1
+  int_val: 1
+  float_val: 1.5
+  string_val: MyString
+  blob_val: 
