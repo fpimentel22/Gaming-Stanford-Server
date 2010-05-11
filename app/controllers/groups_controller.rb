@@ -17,6 +17,8 @@ class GroupsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.json { render :json => { "edu.stanford.cs.gaming.sdk.model.Group" => 
+         { :id => @group.id, :name => @group.name }}}
       format.xml  { render :xml => @group }
     end
   end
