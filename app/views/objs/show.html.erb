@@ -1,0 +1,23 @@
+<p>
+  <b>App:</b>
+  <%=h @obj.app_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @obj.user_id %>
+</p>
+
+<p>
+  <b>Group:</b>
+  <%=h @obj.group_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @obj.obj_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_obj_path(@obj) %> |
+<%= link_to 'Back', objs_path %>

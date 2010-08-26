@@ -1,7 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :object_properties
 
-  map.resources :objects
+  map.score_boards_multiple_create  '/score_boards/multiple_create', :controller => 'score_boards', :action => 'post_multiple'
+
+  map.score_boards_multiple_update  '/score_boards/multiple_update', :controller => 'score_boards', :action => 'put_multiple'
+
+  map.resources :objs
+
+  map.resources :object_properties
 
   map.resources :developers
 

@@ -15,7 +15,7 @@
     <td><%=h developers.email %></td>
     <td><%=h developers.password %></td>
     <td><%= link_to 'Show', developers %></td>
-    <td><%= link_to 'Edit', edit_developers_path(developers) %></td>
+    <td><%= link_to 'Edit', edit_developer_path(developers) %></td>
     <td><%= link_to 'Destroy', developers, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -23,4 +23,4 @@
 
 <br />
 
-<%= link_to 'New developers', new_developers_path %>
+<%= link_to 'New developers', new_developer_path %>

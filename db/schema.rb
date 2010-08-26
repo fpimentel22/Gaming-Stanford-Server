@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100509201517) do
+ActiveRecord::Schema.define(:version => 20100720214942) do
 
   create_table "apps", :force => true do |t|
     t.string   "name"
@@ -47,6 +47,7 @@ ActiveRecord::Schema.define(:version => 20100509201517) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "owner_id"
   end
 
   create_table "groups_users", :force => true do |t|
@@ -57,24 +58,26 @@ ActiveRecord::Schema.define(:version => 20100509201517) do
   end
 
   create_table "object_properties", :force => true do |t|
-    t.integer  "object_id"
+    t.integer  "obj_id"
     t.string   "name"
-    t.integer  "type"
+    t.integer  "prop_type"
     t.integer  "int_val"
     t.float    "float_val"
-    t.string   "string_val"
+    t.text     "string_val"
     t.binary   "blob_val"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "objects", :force => true do |t|
+  create_table "objs", :force => true do |t|
     t.integer  "app_id"
     t.integer  "user_id"
     t.integer  "group_id"
-    t.string   "type"
+    t.string   "obj_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "rating_count"
+    t.integer  "rating_total"
   end
 
   create_table "score_boards", :force => true do |t|
@@ -82,7 +85,7 @@ ActiveRecord::Schema.define(:version => 20100509201517) do
     t.integer  "user_id"
     t.integer  "group_id"
     t.integer  "value"
-    t.string   "type"
+    t.string   "sb_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -91,9 +94,10 @@ ActiveRecord::Schema.define(:version => 20100509201517) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "email"
-    t.integer  "fb_id"
+    t.integer  "fb_id",      :limit => 8
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "fb_photo"
   end
 
 end

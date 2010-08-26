@@ -2,7 +2,7 @@ class DevelopersController < ApplicationController
   # GET /developers
   # GET /developers.xml
   def index
-    @developers = Developers.all
+    @developers = Developer.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class DevelopersController < ApplicationController
   # GET /developers/1
   # GET /developers/1.xml
   def show
-    @developers = Developers.find(params[:id])
+    @developers = Developer.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class DevelopersController < ApplicationController
   # GET /developers/new
   # GET /developers/new.xml
   def new
-    @developers = Developers.new
+    @developers = Developer.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class DevelopersController < ApplicationController
 
   # GET /developers/1/edit
   def edit
-    @developers = Developers.find(params[:id])
+    @developers = Developer.find(params[:id])
   end
 
   # POST /developers
   # POST /developers.xml
   def create
-    @developers = Developers.new(params[:developers])
+    @developers = Developer.new(params[:developers])
 
     respond_to do |format|
       if @developers.save
@@ -57,7 +57,7 @@ class DevelopersController < ApplicationController
   # PUT /developers/1
   # PUT /developers/1.xml
   def update
-    @developers = Developers.find(params[:id])
+    @developers = Developer.find(params[:id])
 
     respond_to do |format|
       if @developers.update_attributes(params[:developers])
@@ -74,7 +74,7 @@ class DevelopersController < ApplicationController
   # DELETE /developers/1
   # DELETE /developers/1.xml
   def destroy
-    @developers = Developers.find(params[:id])
+    @developers = Developer.find(params[:id])
     @developers.destroy
 
     respond_to do |format|

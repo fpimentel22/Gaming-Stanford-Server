@@ -1,19 +1,19 @@
 <h1>Editing object_properties</h1>
 
-<% form_for(@object_properties) do |f| %>
+<% form_for(@object_property) do |f| %>
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :object_id %><br />
-    <%= f.text_field :object_id %>
+    <%= f.label :obj_id %><br />
+    <%= f.text_field :obj_id %>
   </p>
   <p>
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </p>
   <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
+    <%= f.label :prop_type %><br />
+    <%= f.text_field :prop_type %>
   </p>
   <p>
     <%= f.label :int_val %><br />
@@ -36,5 +36,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @object_properties %> |
+<%= link_to 'Show', @object_property %> |
 <%= link_to 'Back', object_properties_path %>

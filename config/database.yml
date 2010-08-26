@@ -18,11 +18,11 @@ development:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: Gaming@Stanford_development
+  database: gaming_development
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
+  username: gaming
+  password: V7uh4zG5JrBzzpE7
+
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -41,8 +41,16 @@ production:
   adapter: mysql
   encoding: utf8
   reconnect: false
-  database: Gaming@Stanford_production
+  database: gaming_development
   pool: 5
-  username: root
-  password: 
-  socket: /tmp/mysql.sock
+  username: gaming
+  password: V7uh4zG5JrBzzpE7
+
+#  adapter: mysql
+#  encoding: utf8
+#  reconnect: false
+#  database: Gaming@Stanford_production
+#  pool: 5
+#  username: root
+#  password: 
+#  socket: /tmp/mysql.sock

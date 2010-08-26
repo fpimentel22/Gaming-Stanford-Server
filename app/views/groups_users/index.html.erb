@@ -11,7 +11,7 @@
     <td><%=h groups_users.group_id %></td>
     <td><%=h groups_users.user_id %></td>
     <td><%= link_to 'Show', groups_users %></td>
-    <td><%= link_to 'Edit', edit_groups_users_path(groups_users) %></td>
+    <td><%= link_to 'Edit', edit_groups_user_path(groups_users) %></td>
     <td><%= link_to 'Destroy', groups_users, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -19,4 +19,4 @@
 
 <br />
 
-<%= link_to 'New groups_users', new_groups_users_path %>
+<%= link_to 'New groups_user', new_groups_user_path %>

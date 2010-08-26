@@ -1,0 +1,26 @@
+<h1>Listing objs</h1>
+
+<table>
+  <tr>
+    <th>App</th>
+    <th>User</th>
+    <th>Group</th>
+    <th>Type</th>
+  </tr>
+
+<% @objs.each do |obj| %>
+  <tr>
+    <td><%=h obj.app_id %></td>
+    <td><%=h obj.user_id %></td>
+    <td><%=h obj.group_id %></td>
+    <td><%=h obj.obj_type %></td>
+    <td><%= link_to 'Show', obj %></td>
+    <td><%= link_to 'Edit', edit_obj_path(obj) %></td>
+    <td><%= link_to 'Destroy', obj, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New obj', new_obj_path %>

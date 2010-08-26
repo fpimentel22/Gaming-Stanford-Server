@@ -11,22 +11,22 @@
     <th>Blob val</th>
   </tr>
 
-<% @object_properties.each do |object_properties| %>
+<% @object_properties.each do |object_property| %>
   <tr>
-    <td><%=h object_properties.object_id %></td>
-    <td><%=h object_properties.name %></td>
-    <td><%=h object_properties.type %></td>
-    <td><%=h object_properties.int_val %></td>
-    <td><%=h object_properties.float_val %></td>
-    <td><%=h object_properties.string_val %></td>
-    <td><%=h object_properties.blob_val %></td>
-    <td><%= link_to 'Show', object_properties %></td>
-    <td><%= link_to 'Edit', edit_object_properties_path(object_properties) %></td>
-    <td><%= link_to 'Destroy', object_properties, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%=h object_property.obj_id %></td>
+    <td><%=h object_property.name %></td>
+    <td><%=h object_property.prop_type %></td>
+    <td><%=h object_property.int_val %></td>
+    <td><%=h object_property.float_val %></td>
+    <td><%=h object_property.string_val %></td>
+    <td><%=h object_property.blob_val %></td>
+    <td><%= link_to 'Show', object_property %></td>
+    <td><%= link_to 'Edit', edit_object_property_path(object_property) %></td>
+    <td><%= link_to 'Destroy', object_property, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New object_properties', new_object_properties_path %>
+<%= link_to 'New object_property', new_object_property_path %>

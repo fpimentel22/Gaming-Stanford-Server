@@ -2,7 +2,7 @@ class AppsUsersController < ApplicationController
   # GET /apps_users
   # GET /apps_users.xml
   def index
-    @apps_users = AppsUsers.all
+    @apps_users = AppsUser.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class AppsUsersController < ApplicationController
   # GET /apps_users/1
   # GET /apps_users/1.xml
   def show
-    @apps_users = AppsUsers.find(params[:id])
+    @apps_users = AppsUser.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class AppsUsersController < ApplicationController
   # GET /apps_users/new
   # GET /apps_users/new.xml
   def new
-    @apps_users = AppsUsers.new
+    @apps_users = AppsUser.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,13 +34,13 @@ class AppsUsersController < ApplicationController
 
   # GET /apps_users/1/edit
   def edit
-    @apps_users = AppsUsers.find(params[:id])
+    @apps_users = AppsUser.find(params[:id])
   end
 
   # POST /apps_users
   # POST /apps_users.xml
   def create
-    @apps_users = AppsUsers.new(params[:apps_users])
+    @apps_users = AppsUser.new(params[:apps_users])
 
     respond_to do |format|
       if @apps_users.save
@@ -57,7 +57,7 @@ class AppsUsersController < ApplicationController
   # PUT /apps_users/1
   # PUT /apps_users/1.xml
   def update
-    @apps_users = AppsUsers.find(params[:id])
+    @apps_users = AppsUser.find(params[:id])
 
     respond_to do |format|
       if @apps_users.update_attributes(params[:apps_users])
@@ -74,7 +74,7 @@ class AppsUsersController < ApplicationController
   # DELETE /apps_users/1
   # DELETE /apps_users/1.xml
   def destroy
-    @apps_users = AppsUsers.find(params[:id])
+    @apps_users = AppsUser.find(params[:id])
     @apps_users.destroy
 
     respond_to do |format|
